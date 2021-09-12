@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Clock the button to get your coordinates.</p>
+  <button onclick="getLocation()">Try it</button>
+  <P id="demo"></p>
+</body>
+</html>

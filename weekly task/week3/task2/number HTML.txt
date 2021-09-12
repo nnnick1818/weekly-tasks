@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Number</h2>
+
+<p>If is add two numbers, the result is the sum of the two numbers:</p>
+<p id="demo"></p>
+
+<p>If is add two numeric strings, the result will be a concatenated string: </p>
+<p id="demo1"></p>
+
+<p>If is add a number and a numeric string, the result will be a concatenated string: </p>
+<p id="demo3"></p>
+
+<p>Click the button, get a random number between 0 and 100: </p>
+<button onclick="document.getElementById('demo4').innerHTML = getRndInteger(0,101)">Click Me</button>
+<p id="demo4"></p>
+
+</body>
+</html>

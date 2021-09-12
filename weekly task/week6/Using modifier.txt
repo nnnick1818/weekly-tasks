@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>play</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <script>
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {
+        box() {
+        console.log('This is the click event that triggered the box div!')
+        },
+        btn() {
+        console.log('This is the click event that triggered the btn button!')
+        }
+        }
+        });
+    </script>
+    <div id="app">
+    <div class="box" @click="box">
+    <input type="button" value="click me" @click.stop="btn">
+    </div>
+    </div>
+
+
+</body>
+</html>

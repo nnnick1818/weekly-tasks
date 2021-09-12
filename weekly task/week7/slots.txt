@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>play</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <script>
+    Vue.component('child-component', {
+        template: '#child-component',
+        data() {
+            return {
+              childTitle: 'title from child component',
+              childSubtitle: 'subtitle from child component'
+            }
+        },
+        props:{
+          subtitle: {
+            type: String,
+            required: true
+          }
+        }
+      })
+      
+      new Vue ({
+        el: '#app',
+        data() {
+            return {
+              title: 'Hello Vue',
+              subtitle: 'how to use slots'
+          }
+        }
+      })
+    </script>
+    <div id="app">
+        <section class="hero is-fullheight is-warning is-bold">
+          <div class="hero-body">
+            <div class="container">
+              <p class="title is-1">{{ title }}</p>
+              <p class="subtitle is-3">{{ subtitle }}</p>
+             <child-component>
+               <p slot="bottom">Let's move this into the bottom slot</p>
+               <p>Hello from the parent!</p>
+               <p slot="top">Let's move this into the top slot</p>
+             </child-component>
+             <child-component></child-component>
+            </div>
+          </div>
+       </section>
+     </div>
+     
+     <script type="text/x-template" id="child-component">
+       <div>
+         <slot name="top">
+         </slot>
+
+         <slot>
+           <p>Hello from the child!</p>
+         </slot>
+
+         <slot name="bottom">
+         </slot>
+       </div>
+     </script>
+
+</body>
+</html>

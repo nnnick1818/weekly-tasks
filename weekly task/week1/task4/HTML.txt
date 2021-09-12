@@ -1,0 +1,16 @@
+<section id='app'>
+  <h1>{{title}}</h1>
+  <div v-for="todoItem in todoLists">
+      <input class="check-list"
+             type="checkbox"
+             v-on:change="toggleItem(todoItem)"
+             v-bind:checked="todoItem.checked"
+      />
+    <del class="gray" v-if="todoItem.checked">
+      {{todoItem.text}}
+    </del>
+    <span v-else>
+      {{todoItem.text}}
+    </span>
+  </div>
+</section>

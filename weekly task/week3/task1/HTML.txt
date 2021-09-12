@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript String Methods</h2>
+
+<p>Length of the following sentence: </p>
+<p id="demo"></p>
+
+<p>The charAt() metod returns the character at a given position in a string:</p>
+<p id="demo1"></p>
+
+<p>The toUpperCase() method returns the character at a given position in a string:</p>
+<p id="demo2"></p>
+
+<p>The toLowerCase() method returns the character at a given position in a string:</p>
+<p id="demo3"></p>
+
+</body>
+</html>

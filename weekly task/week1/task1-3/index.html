@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My first website</title>
+        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/index.css">
+        <script type="text/javascript">
+	    	function submit()
+            {
+               alert("Submit success");
+            }
+            function getReport()
+            {
+    
+                var grade = "";	 //declare a variable for grade
+                var  result="";	 //declare a variable for result
+    
+                //read the marks
+                var engMarks = document.getElementById('txtEnglish').value;
+                var chinsesMarks = document.getElementById('txtChinese').value;
+                var mathsMarks = document.getElementById('txtMaths').value;
+                var scienceMarks = document.getElementById('txtScience').value;
+                        
+                //calculate the total marks (using double notation technique)
+                var totalMarks = engMarks - (- chinsesMarks) - (- mathsMarks) - (- scienceMarks);
+                        
+                //get the average marks
+                var averageMarks = totalMarks / 4;					
+                        
+                //find the grade and result using the ternary operator inside the switch statement					
+                switch(
+                        
+                        //usage of ternary operator inside switch
+    
+                        (averageMarks > 60 && averageMarks <= 100) ? 1 : 
+                        (averageMarks > 50 && averageMarks < 60) ? 2 : 
+                        (averageMarks > 40 && averageMarks < 50) ? 3 : 0
+                      )
+                                
+                        {
+                            case 1 :grade = "A";result="First Class";break;
+                            case 2 :grade = "B"; result="Second Class";break;
+                            case 3 :grade = "C"; result="Third Class";break;
+                            case 0 :grade = "D"; result="Fail";break;
+                        }
+                                
+                            
+                //display the results	
+                document.getElementById('txtStudentName').value = document.getElementById('txtName').value;
+                document.getElementById('txtStudentClass').value = document.getElementById('txtClass').value;
+                document.getElementById('txtTotalMarks').value = totalMarks;
+                document.getElementById('txtAvgMarks').value = averageMarks;
+                document.getElementById('txtGrade').value = grade;
+                document.getElementById('txtResult').value = result;
+            
+            } //end of function getReport
+            
+            </script>
+
+        <style>
+            h1{
+                color:chartreuse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>My first website page</h1>
+        <h2>this website is built by using HTML</h2>
+        <p>this my first paragraph</p>
+        <p1 style="color:coral;">this is my first colorful paragraph</p1>
+        <br><br>
+        <p2 style="font-size: 30px; color:blue;">BUY NOW!!!</p2>
+        <br>
+        <img src="./img/iPhone12.jfif"<br><br>
+
+
+    
+        <label for="FirstName">FirstName:</label>
+        <input type="text" name="FirstName">
+        <br><br>
+        <label for="lastname">Lastname:</label>
+        <input type="text" name="LasttName">
+        <br><br>
+
+        <table class="table" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Iphone 12 Mini</td>
+                <td>From $1199</td>
+            </tr>
+            <tr>
+                <td>Iphone 12</td>
+                <td>From $1349</td>
+            </tr>
+            <tr>
+                <td>Iphone 12 Pro</td>
+                <td>From $1699</td>
+            </tr>
+            <tr>
+                <td>Iphone 12 Pro Max</td>
+                <td>From $1849</td>
+            </tr>
+        </table>
+
+        <div>
+            <h3>Choose your finish:</h3>
+            <input type="radio" id="color" value="Graphite">Graphite
+            <input type="radio" id="color" value="Silver">Silver
+            <input type="radio" id="color" value="Gold">Gold
+            <input type="radio" id="color" value="Pacific Blue">Pacific Blue
+            <h3>Choose your capacity:</h3>
+            <input type="radio" id="capacity" value="128BG">128BG
+            <input type="radio" id="capacity" value="256GB">256GB
+            <input type="radio" id="capacity" value="512GB">512GB
+        </div>
+        <br><br>
+
+        <input type="submit" value="Submit" onclick="submit()">
+        <br><br>
+        
+        <div class="row">
+            <div class="column" style="background: cornflowerblue;">
+                <nav>
+                    <ul>
+                        <li>
+                            HOME
+                        </li>
+                        <li>
+                            Mail
+                        </li>
+                        <li>
+                            Calender
+                        </li>
+                        <li>
+                            People
+                        </li>
+                        <li>
+                            oneDrive
+                        </li>
+                        <li>
+                            Skype
+                        </li>
+                        <li>
+                            Prtfolio
+                        </li>
+                        <li>
+                            STAR
+                        </li>
+                    </ul>
+                </nav>
+
+                <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">
+                    Click to display current date and time.
+                    </botton>
+                    <p id="demo"></p>
+            </div>
+            <div class="column" style="background: cyan;">
+                <fieldset style="width:600px">
+                    <legend><b>Student Input Section:</b></legend>
+                    Name:<input type="text" id="txtName"> &nbsp;&nbsp;
+                    Class:<input type="text" id="txtClass"> <br/><br/>
+                    <table border="1">
+                        <tr><td>English</td><td><input type="text" id="txtEnglish"></td></tr>
+                        <tr><td>Chinses</td><td><input type="text" id="txtChinese"></td></tr>
+                        <tr><td>Maths</td><td><input type="text" id="txtMaths"></td></tr>
+                        <tr><td>Science</td><td><input type="text" id="txtScience"></td></tr>				
+                    </table><br/><br/>
+                    <input type="button" value="Get Result" onClick="getReport();">
+                </fieldset>
+                
+                    <h2>Report Card</h2>
+                    
+                    <table border="1">
+                        <tr><td>Name</td><td><input type="text" id="txtStudentName" readonly></td></tr>
+                        <tr><td>Class</td><td><input type="text" id="txtStudentClass" readonly></td></tr>
+                        <tr><td>Total Marks</td><td><input type="text" id="txtTotalMarks" readonly></td></tr>
+                        <tr><td>Average Marks</td><td><input type="text" id="txtAvgMarks" readonly></td></tr>
+                        <tr><td>Grade</td><td><input type="text" id="txtGrade" readonly></td></tr>
+                        <tr><td>Remarks</td><td><input type="text" id="txtResult" readonly></td></tr>
+                    </table>
+
+            </div>
+        </div>
+
+
+
+        
+
+    </body>
+</html>

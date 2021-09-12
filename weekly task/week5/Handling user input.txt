@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>play</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data:{
+                subjects:[
+                    {name: 'English'},
+                    {name: 'Physics'},
+                ],
+                newSubject: ''
+            },
+            methods:{
+                addSubject: function(){
+                    return this.subjects.push({name: this.newSubject})
+                    this.newSubject=""
+                }
+            }
+        })
+    </script>
+    <div id="app">
+        <input v-model="newSubject" v-on:keyup.enter="addSubject">
+        <button v-on:click="addSubject">
+            ADD
+        </button>
+        <ul>
+            <li v-for="subject in subjects"> {{subject.name}} </li>
+        </ul>
+    </div>
+
+</body>
+</html>

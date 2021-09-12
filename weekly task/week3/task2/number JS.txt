@@ -1,0 +1,15 @@
+let x = 99;
+let y = 299;
+let z = x + y;
+document.getElementById("demo").innerHTML = z;
+let a = 99;
+let b = 299;
+let c = a + b;
+document.getElementById("demo1").innerHTML = c;
+let d = x + a;
+document.getElementById("demo3").innerHTML = d;
+
+function getRndInteger(min, max) 
+{
+return Math.floor(Math.random() * (max - min)) + min;
+}

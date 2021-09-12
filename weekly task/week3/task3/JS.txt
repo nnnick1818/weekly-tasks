@@ -1,0 +1,15 @@
+const person = {
+    firstName: 'Nick',
+    lastName: 'Wang',
+    get fullName(){
+        return '${person.fisrtName} ${person.lastName}'; 
+    },
+    set fullName(value){
+        const parts = value.split('');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+
+person.firstName = 'James Bond'
+console.log(person.fullName());

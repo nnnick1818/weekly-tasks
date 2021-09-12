@@ -1,0 +1,9 @@
+let text = "I love SIT120, I love JS";
+document.getElementById("demo").innerHTML = text.length;
+
+document.getElementById("demo1").innerHTML = text.charAt(0);
+
+document.getElementById("demo2").innerHTML = text.toUpperCase();
+
+document.getElementById("demo3").innerHTML = text.toLowerCase();
+

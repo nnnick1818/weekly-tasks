@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>play</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <script>
+        const app = new Vue({
+            el: '#root',
+            data:{
+                name: 'Nick',
+                country: 'China'
+            }
+        })
+    </script>
+    <div id="root">
+        <h1>My name is {{name}}</h1>
+        <h1>My hometown is {{country}}</h1>
+    </div>
+
+</body>
+</html>
